@@ -75,6 +75,56 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Development
 
+### User Stories
+After reviewing the business requirements, a set of user stories were formulated to guide the development procedure. These were collected in a project planning board which can be viewed here: <https://github.com/users/knutinator/projects/3>
+<br><br>
+
+**USER STORY #1: View variables relevant to price**
+
+* As a client, I want to see visualizations of the most relevant variables correlated to sale price, so that I can better understand the relationship between house attributes and sale prices.
+<br><br>
+
+**USER STORY #2: View distribution of attributes**
+
+* As a client, I want to see visualizations of the distribution of house attributes, so that I can better understand the range of values for each variable.
+<br><br>
+
+**USER STORY #3: Predict house prices**
+
+* As a client, I want a machine learning model that can predict the sale price of my inherited houses, as well as any other house in Ames, Iowa, so that I can make informed decisions about the sales prices.
+<br><br>
+
+**USER STORY #4: View prediction accuracy**
+
+* As a client, I want to be able to test the accuracy of the model on a test set, and receive a performance report with an R2 score of at least 0.75 on both the train and test sets.
+<br><br>
+
+**USER STORY #5: View project on dashboard**
+
+* As a client, I want a dashboard that presents the data visualizations and machine learning model predictions in a clear and concise manner, so that I can easily access the insights and make informed decisions about the sales prices of the houses.
+<br><br>
+
+
+
+
+### Inital data evaluation and cleaning
+After downloading and reviewing the datasets from Kaggle, an initial data-cleaning procedure was performed.
+
+In "house-price/house_prices_records.csv" the following was done:
+* replace all NaN values with 0
+* convert all floats to ints
+* convert all NaN and None string(object) values to No
+* convert all No values in GarageFinish to Unf
+* replace NaN in GarageYrBlt with YearBuilt from same row
+
+In "house-price/inherited_houses.csv" the following was done:
+* convert all float values to ints
+* add column 'YearRemodAdd', fill with 'YearBuilt' value
+
+This makes the two datasets contain comparable values in the same format and makes it easier to perform further data exploration and machine learning tasks.
+<br><br>
+
+
 ## Testing
 
 ## Unfixed Bugs
