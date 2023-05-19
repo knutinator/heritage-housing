@@ -1,11 +1,11 @@
 
-## Heritage Housing - pricing predictor
+# Heritage Housing - pricing predictor
 
 A machine learning tool for use on house pricing visualization and preciction in Ames, Iowa.
 
 The tool helps the client to do the following:
-- View how house attributes correlate to sale prices.
-- Predict future sale prices for specific houses.
+- View what house attributes correlate to sale prices.
+- Predict future sale prices for specific houses in Ames, Iowa.
 
 
 ## Index
@@ -72,8 +72,9 @@ Although your friend has an excellent understanding of property prices in her ow
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 
+----
 
-## Development
+# Development
 
 ### User Stories
 After reviewing the business requirements, a set of user stories were formulated to guide the development procedure. These were collected in a project planning board which can be viewed here: <https://github.com/users/knutinator/projects/3>
@@ -104,36 +105,46 @@ After reviewing the business requirements, a set of user stories were formulated
 * As a client, I want a dashboard that presents the data visualizations and machine learning model predictions in a clear and concise manner, so that I can easily access the insights and make informed decisions about the sales prices of the houses.
 <br><br>
 
+-----
+
+# Initial Data Analysis
+In this project, I conducted an initial analysis of the house price dataset to gain insights into the factors influencing house prices. The dataset consists of information about various features related to houses, such as square footage, number of bedrooms, basement characteristics, garage details, and more.
+
+1. **Loading the Dataset:** I started by loading the house price dataset into a Pandas DataFrame, allowing me to manipulate and analyze the data efficiently.<br><br>
+2. **Data Cleaning:** Before diving into the analysis, I performed data cleaning to make the data more easily computable. This involved converting all float values to integer values, replacing all NaN values with 0, and replacing some of the None values with No (to confirm with the Dataset Content Description.)<br><br>
+3. **Data remapping:**
+Following that, I mapped all the categorical data values to numerical values based on how many categories were in each column. The result was a DataFrame containing only numerical values, which is much more suitable for further analysis.
+
+## Exploratory Data Analysis (EDA) with Pandas
+
+To get a better understanding of the dataset, I performed Exploratory Data Analysis (EDA) using the Pandas library in Python. Here are the key steps I took:
+
+1. **Descriptive Statistics:** I computed descriptive statistics for the numerical variables, such as mean, standard deviation, minimum, maximum, and quartiles. This provided an overview of the central tendencies and distributions of the data.<br><br>
+2. **Visualization:** To visualize the relationships between the house price and other variables, I created various types of plots, including scatter plots, box plots, and bar charts. These visualizations allowed me to identify potential correlations and patterns.
+
+## Correlation Analysis
+
+Correlation analysis is crucial for understanding the relationships between variables and their impact on house prices. I used the correlation coefficient to measure the strength and direction of the linear relationship between the variables. Here are the steps I followed:
+
+1. **Selecting Variables:** I identified a set of key variables that I hypothesized might have a significant impact on house prices. These variables included square footage, overall house quality, the house age, size of the garage, and kitchen quality.<br><br>
+2. **Computing Correlations:** Using the Pandas library, I computed the correlation coefficients between the selected variables and the house prices. I utilized both Pearson correlation (for numerical variables) and Spearman correlation to capture different types of relationships.<br><br>
+3. **Visualization:** To visually represent the correlations, I created scatter plots and heatmaps. Scatter plots helped visualize the relationships between individual variables and house prices, while heatmaps provided a comprehensive view of the correlation matrix.
 
 
+Overall, this initial analysis and correlation visualization allowed me to identify potential predictors of house prices and gain insights into the dataset. These findings laid the foundation for further analysis and modeling in the project.
 
-### Inital data evaluation and cleaning
-After downloading and reviewing the datasets from Kaggle, an initial data-cleaning procedure was performed.
-
-In "house-price/house_prices_records.csv" the following was done:
-* replace all NaN values with 0
-* convert all floats to ints
-* convert all NaN and None string(object) values to No
-* convert all No values in GarageFinish to Unf
-* replace NaN in GarageYrBlt with YearBuilt from same row
-
-In "house-price/inherited_houses.csv" the following was done:
-* convert all float values to ints
-* add column 'YearRemodAdd', fill with 'YearBuilt' value
-
-This makes the two datasets contain comparable values in the same format and makes it easier to perform further data exploration and machine learning tasks.
-<br><br>
+---
 
 
-## Testing
+# Testing
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
 
-## Deployment
+# Deployment
 ### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+* The App live link is: https://heritage-house.herokuapp.com/
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
 * The project was deployed to Heroku using the following steps.
 
