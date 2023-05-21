@@ -59,22 +59,33 @@ def page_house_price_study_body():
 
 
 def corr_heatmap(df, vars_to_study):
-    vars_to_study.append('SalePrice')
+    df_copy = df.copy()
+    kitchenqual_mapping = {'Ex': 5, 'Gd': 4, 'TA': 3, 'Fa': 2, 'Po': 1}
+    df_copy['KitchenQual'] = df_copy['KitchenQual'].map(kitchenqual_mapping)
+
+    # Create a separate list for plotting
+    plot_vars = vars_to_study.copy()
+    plot_vars.append('SalePrice')
 
     # Plot the heat map
-    sns.heatmap(df[vars_to_study].corr(), annot=True, cmap="coolwarm")
+    sns.heatmap(df_copy[plot_vars].corr(), annot=True, cmap="coolwarm")
     plt.title("Correlation of features to SalePrice")
     st.pyplot()
 
-    # Remove SalePrice from vars_to_study
-    vars_to_study.remove('SalePrice')
-
 
 def corr_scatterplot(df, vars_to_study):
+    df_copy = df.copy()
+    kitchenqual_mapping = {'Ex': 5, 'Gd': 4, 'TA': 3, 'Fa': 2, 'Po': 1}
+    df_copy['KitchenQual'] = df_copy['KitchenQual'].map(kitchenqual_mapping)
+
+    # Create a separate list for plotting
+    plot_vars = vars_to_study.copy()
+    plot_vars.append('SalePrice')
+
     # create scatterplots showing the relationship between each variable and SalePrice
-    for var in vars_to_study:
+    for var in plot_vars:
         plt.figure()
-        plt.scatter(df[var], df['SalePrice'], alpha=0.5)
+        plt.scatter(df_copy[var], df_copy['SalePrice'], alpha=0.5)
         plt.xlabel(var)
         plt.ylabel('SalePrice')
         plt.title(f'{var} vs. SalePrice')
