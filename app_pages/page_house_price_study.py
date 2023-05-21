@@ -49,6 +49,14 @@ def page_house_price_study_body():
         f"* Newness of house (year built)\n"
     )
 
+    # Correlation Heatmap
+    if st.checkbox("Correlation Heatmap"):
+        corr_heatmap(df, vars_to_study)
+
+    # Correlation Scatterplots
+    if st.checkbox("Correlation Scatterplots"):
+        corr_scatterplot(df, vars_to_study)
+
 
 def corr_heatmap(df, vars_to_study):
     vars_to_study.append('SalePrice')
