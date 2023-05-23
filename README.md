@@ -1,18 +1,38 @@
+# Heritage Housing - Pricing Predictor <!-- omit in toc -->
 
-# Heritage Housing - pricing predictor
+A machine learning app for house pricing visualization and preciction in Ames, Iowa.
 
-A machine learning tool for use on house pricing visualization and preciction in Ames, Iowa.
-
-The tool helps the client to do the following:
+The app helps the client to do the following:
 - View what house attributes correlate to sale prices.
 - Predict future sale prices for specific houses in Ames, Iowa.
 
+[View the app here >](https://heritage-house.herokuapp.com/)
 
-## Index
+---
 
-Put index here
+## Index <!-- omit in toc -->
 
-## Dataset Content
+- [Dataset Content](#dataset-content)
+- [Business Requirements](#business-requirements)
+- [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+- [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
+- [ML Business Case](#ml-business-case)
+- [Dashboard Design](#dashboard-design)
+- [Development](#development)
+- [User Stories](#user-stories)
+- [Initial Data Analysis](#initial-data-analysis)
+  - [Exploratory Data Analysis (EDA) with Pandas](#exploratory-data-analysis-eda-with-pandas)
+- [Correlation Analysis](#correlation-analysis)
+- [Testing](#testing)
+  - [Unfixed Bugs](#unfixed-bugs)
+- [Deployment](#deployment)
+  - [Heroku](#heroku)
+  - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
+- [Credits](#credits)
+
+---
+
+# Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
@@ -43,11 +63,12 @@ Put index here
 |YearRemodAdd|Remodel date (same as construction date if no remodelling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
 
+[Back to Index](#index)
+
+---
 
 
-
-
-## Business Requirements
+# Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
@@ -55,28 +76,42 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
 * 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
+[Back to Index](#index)
 
-## Hypothesis and how to validate?
+---
+
+# Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them).
 
+[Back to Index](#index)
 
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
+---
+
+# The rationale to map the business requirements to the Data Visualisations and ML tasks
 * List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
 
+[Back to Index](#index)
 
-## ML Business Case
+---
+
+# ML Business Case
 * In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
 
+[Back to Index](#index)
 
-## Dashboard Design
+---
+
+# Dashboard Design
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 
-----
+[Back to Index](#index)
+
+---
 
 # Development
 
-### User Stories
+# User Stories
 After reviewing the business requirements, a set of user stories were formulated to guide the development procedure. These were collected in a project planning board which can be viewed here: <https://github.com/users/knutinator/projects/3>
 <br><br>
 
@@ -105,7 +140,9 @@ After reviewing the business requirements, a set of user stories were formulated
 * As a client, I want a dashboard that presents the data visualizations and machine learning model predictions in a clear and concise manner, so that I can easily access the insights and make informed decisions about the sales prices of the houses.
 <br><br>
 
------
+[Back to Index](#index)
+
+---
 
 # Initial Data Analysis
 In this project, I conducted an initial analysis of the house price dataset to gain insights into the factors influencing house prices. The dataset consists of information about various features related to houses, such as square footage, number of bedrooms, basement characteristics, garage details, and more.
@@ -122,7 +159,7 @@ To get a better understanding of the dataset, I performed Exploratory Data Analy
 1. **Descriptive Statistics:** I computed descriptive statistics for the numerical variables, such as mean, standard deviation, minimum, maximum, and quartiles. This provided an overview of the central tendencies and distributions of the data.<br><br>
 2. **Visualization:** To visualize the relationships between the house price and other variables, I created various types of plots, including scatter plots, box plots, and bar charts. These visualizations allowed me to identify potential correlations and patterns.
 
-## Correlation Analysis
+# Correlation Analysis
 
 Correlation analysis is crucial for understanding the relationships between variables and their impact on house prices. I used the correlation coefficient to measure the strength and direction of the linear relationship between the variables. Here are the steps I followed:
 
@@ -133,16 +170,21 @@ Correlation analysis is crucial for understanding the relationships between vari
 
 Overall, this initial analysis and correlation visualization allowed me to identify potential predictors of house prices and gain insights into the dataset. These findings laid the foundation for further analysis and modeling in the project.
 
----
+[Back to Index](#index)
 
+---
 
 # Testing
 
 ## Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
 
+[Back to Index](#index)
+
+---
+
 # Deployment
-### Heroku
+## Heroku
 
 * The App live link is: https://heritage-house.herokuapp.com/
 * Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
@@ -155,39 +197,22 @@ Overall, this initial analysis and correlation visualization allowed me to ident
 5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 6. If the slug size is too large then add large files not required for the app to the .slugignore file.
 
+[Back to Index](#index)
+
+---
+
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
 
+[Back to Index](#index)
 
-## Credits 
+---
+
+# Credits 
 
 * In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
+* 
+[Back to Index](#index)
 
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* In case you would like to thank the people that provided support through this project.
-
-## Gitpod Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with *Regenerate API Key*.
+---
