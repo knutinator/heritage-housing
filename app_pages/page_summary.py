@@ -17,7 +17,7 @@ def page_summary_body():
         f"2010.")
 
     # Link to README file, so the users can have access to 
-        # #full project documentation
+    # full project documentation
     st.write(
         f"* For additional information, please visit and **read** the "
         f"[Project README file](https://github.com/knutinator/heritage-housing).")
