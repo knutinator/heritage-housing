@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 ENV PYTHON_VERSION 3.8.12
 ENV DEBIAN_FRONTEND=noninteractive
 #Set of all dependencies needed for pyenv to work on Ubuntu
-RUN apt-get update \ 
+RUN apt-get update \
     && apt-get install -y --no-install-recommends make build-essential libssl-dev libpq-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget ca-certificates curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev mecab-ipadic-utf8 git postgresql-client telnet unzip
 
 RUN curl https://cli-assets.heroku.com/install.sh | sh
@@ -26,7 +26,7 @@ RUN set -ex \
     && pyenv global $PYTHON_VERSION \
     && pyenv rehash \
     && python3 -m pip install --no-cache-dir --upgrade pip \
-    && python3 -m pip install --no-cache-dir --upgrade setuptools wheel virtualenv pipenv pylint rope flake8  mypy autopep8 pep8 pylama pydocstyle bandit notebook twine
+    && python3 -m pip install --no-cache-dir --upgrade setuptools wheel virtualenv pipenv pylint rope flake8  mypy autopep8 pep8 pylama pydocstyle bandit notebook twine jupyter
 
 ENV PATH=$PATH:"/home/codeany/.local/bin"
 
