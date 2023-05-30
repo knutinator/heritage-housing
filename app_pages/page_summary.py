@@ -5,18 +5,22 @@ def page_summary_body():
 
     st.write("### Quick Project Summary")
 
+    st.info(
+        f"* A machine learning app for house pricing visualization and\n"
+        f"* preciction in Ames, Iowa."
+        f"* The app helps the client to do the following:\n"
+        f"* - View what house attributes correlate to sale prices."
+        f"* - Predict future sale prices for specific houses in Ames, Iowa.")
+
     # text based on README file - "Dataset Content" section
     st.info(
-        f"The dataset is sourced from Kaggle. We then created a fictitious "
-        f"user story where predictive analytics can be applied in a real "
-        f"project in the workplace. "
         f"The dataset has almost 1.5 thousand rows and represents housing "
-        f"records from Ames, Iowa, indicating house profile(Floor Area, "
+        f"records from Ames, Iowa, indicating house attributes (Floor Area, "
         f"Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) "
         f"and its respective sale price for houses built between 1872 and "
         f"2010.")
 
-    # Link to README file, so the users can have access to 
+    # Link to README file, so the users can have access to
     # full project documentation
     st.write(
         f"* For additional information, please visit and **read** the "
@@ -31,5 +35,5 @@ def page_summary_body():
         f"to show that. "
         f"2 - The client is interested in predicting the house sale price from "
         f"her four inherited houses and any other house in Ames, Iowa. "
-     
+
     )
