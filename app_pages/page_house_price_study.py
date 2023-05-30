@@ -11,8 +11,14 @@ def page_house_price_study_body():
     # load data
     df = load_house_data()
 
-    vars_to_study = ['GarageArea', 'GrLivArea',
-                     'KitchenQual', 'OverallQual', 'YearBuilt']
+    # copied from house_price_study notebook
+    vars_to_study = ['1stFlrSF',
+                     '2ndFlrSF',
+                     'GarageArea',
+                     'GrLivArea',
+                     'KitchenQual',
+                     'OverallQual',
+                     'TotalBsmtSF']
 
     st.write("### House Price Study")
 
@@ -41,20 +47,26 @@ def page_house_price_study_body():
     )
     st.info(
         f"The correlation plots below indicate that the following are the "
-        f"most important attributes that affect house sale prices: \n"
-        f"* Overall quality of the house \n"
-        f"* Size of ground floor \n"
-        f"* Quality of kitchen \n"
-        f"* Size of garage \n"
-        f"* Newness of house (year built)\n"
+        f"most important attributes that affect house sale prices: \n\n"
+
+        f"* 'OverallQual'   Overall quality of the house \n"
+        f"* 'GrLivArea'     Size of ground floor, in square feet \n"
+        f"* 'KitchenQual'   Quality of kitchen \n"
+        f"* 'GarageArea'    Size of garage in square feet \n"
+        f"* '1stFlrSF'      Size of First Floor in square feet \n"
+        f"* '2ndFlrSF'      Size of Second Floor in square feet \n"
+        f"* 'TotalBsmtSF'   Total Basement size in square feet \n"
     )
 
     # Correlation Heatmap
-    if st.checkbox("Correlation Heatmap"):
+    if st.checkbox("Heatmap depicting the top seven attributes. The values "
+    "show how the attributes correlate to each other and the target variable, "
+    "SalePrice."):
         corr_heatmap(df, vars_to_study)
 
     # Correlation Scatterplots
-    if st.checkbox("Correlation Scatterplots"):
+    if st.checkbox("Scatterplots showing the correlation relationship "
+    "between each individual attribute and the target variable, SalePrice."):
         corr_scatterplot(df, vars_to_study)
 
 
