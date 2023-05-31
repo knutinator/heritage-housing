@@ -36,3 +36,11 @@ def page_predict_price_body():
 
     )
     st.write(df.head())
+
+    # calculate sum of houses
+    sum = df['Predicted House Price'].sum()
+    st.write(
+        f"* The predicted *total* sale price for all the four houses is: &nbsp;$ {sum}  \n"
+    )
+
+    st.write("---")
