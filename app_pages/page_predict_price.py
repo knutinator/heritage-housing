@@ -5,8 +5,8 @@ import pandas as pd
 
 
 def page_predict_price_body():
-#load needed files
-
+    
+    #load needed files
     version = 'v1'
     pipeline = load_pkl_file(
         f"outputs/predict_house_price/{version}/best_regressor_pipeline.pkl")
@@ -17,7 +17,7 @@ def page_predict_price_body():
 
     df = pd.read_csv("inputs/datasets/raw/house-price-20211124T154130Z-001/house-price/inherited_houses.csv")
 
-#run price prediction on inherited houses using trained ML pipeline
+    #run price prediction on inherited houses using trained ML pipeline
     st.write("### Predicted sale prices of the client's four inherited houses")
     st.write(
         f"* These are the characteristics of the clients houses (scroll to view more):"
@@ -44,3 +44,9 @@ def page_predict_price_body():
     )
 
     st.write("---")
+
+    # house price predictor in Ames, Iowa
+    st.write("### Predict other house prices (in Ames, Iowa) \n")
+    st.write("* info")
+
+ 
