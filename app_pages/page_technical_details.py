@@ -5,6 +5,7 @@ from src.data_management import load_house_data, load_pkl_file
 
 
 
+
 def page_technical_details_body():
 
  # load house price pipeline files
@@ -26,5 +27,18 @@ def page_technical_details_body():
         f"score of at least 0.75 on both train and test sets. \n"
         f"* The pipeline achieves XX on the train set and XX on the test set. \n"
     )
+        # show pipeline steps
+    st.write("---")
+    st.write("* **ML pipeline steps used in this project**")
+    st.write(pipeline)
+    st.write("---")
+
+        # show best features
+    st.write("* The features the model was trained on and their importance.")
+    st.write(X_train.columns.to_list())
+    st.image(house_price_feat_importance)
+    st.write("---")
+
+
 
     
