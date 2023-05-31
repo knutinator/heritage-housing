@@ -43,30 +43,34 @@ def page_house_price_study_body():
         f"* A correlation study was conducted in the notebook "
         f"to better understand how "
         f"the house attributes are correlated to sale prices. \n"
-        f"The most correlated attributes are: **{vars_to_study}**"
+
     )
     st.info(
         f"The correlation plots below indicate that the following are the "
         f"most important attributes that affect house sale prices: \n\n"
 
-        f"* 'OverallQual'   Overall quality of the house \n"
-        f"* 'GrLivArea'     Size of ground floor, in square feet \n"
-        f"* 'KitchenQual'   Quality of kitchen \n"
-        f"* 'GarageArea'    Size of garage in square feet \n"
-        f"* '1stFlrSF'      Size of First Floor in square feet \n"
-        f"* '2ndFlrSF'      Size of Second Floor in square feet \n"
-        f"* 'TotalBsmtSF'   Total Basement size in square feet \n"
+        f"* **OverallQual** -  Overall quality of the house \n"
+        f"* **GrLivArea**   -  Size of ground floor, in square feet \n"
+        f"* **KitchenQual** -  Quality of kitchen \n"
+        f"* **GarageArea**  -  Size of garage in square feet \n"
+        f"* **1stFlrSF**    -  Size of First Floor in square feet \n"
+        f"* **2ndFlrSF**    -  Size of Second Floor in square feet \n"
+        f"* **TotalBsmtSF** -  Total Basement size in square feet \n"
     )
 
     # Correlation Heatmap
-    if st.checkbox("Heatmap depicting the top seven attributes. The values "
-    "show how the attributes correlate to each other and the target variable, "
-    "SalePrice."):
+    if st.checkbox("Correlation Heatmap"):
+        st.write(
+            f"The heatmap shows how the top seven attributes correlate "
+            f"to each other and the target, 'SalePrice'. "
+            f"The higher the number, the stronger the correlation.")
         corr_heatmap(df, vars_to_study)
 
     # Correlation Scatterplots
-    if st.checkbox("Scatterplots showing the correlation relationship "
-    "between each individual attribute and the target variable, SalePrice."):
+    if st.checkbox("Correlation Scatterplots"):
+        st.write(
+            f"The scatterplots shows how the datapoints of each individual "
+            f"attribute correlates to SalePrice")
         corr_scatterplot(df, vars_to_study)
 
 
