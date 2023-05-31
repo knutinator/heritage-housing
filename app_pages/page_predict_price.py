@@ -47,7 +47,11 @@ def page_predict_price_body():
 
     # house price predictor in Ames, Iowa
     st.write("### Predict other house prices (in Ames, Iowa) \n")
-    st.write("* info")
+    st.write(
+        f"* The function below can be used to calculate a predicted "
+        f"price for any house in Ames, Iowa. Input the square footage and "
+        f"general quality of the house below, then press 'Run Prediction'. "
+        )
 
     live_pred = InputWidget()
 
