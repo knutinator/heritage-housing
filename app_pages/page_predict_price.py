@@ -35,6 +35,7 @@ def page_predict_price_body():
         f"learning model to produce the prediction:"
 
     )
+    
     st.write(df.head())
 
     # calculate sum of houses
@@ -52,6 +53,9 @@ def page_predict_price_body():
         f"price for any house in Ames, Iowa. Input the square footage and "
         f"general quality of the house below, then press 'Run Prediction'. "
         )
+    st.warning(
+        f"Note: the prediction model is unreliable on very large houses.")
+
 
     live_pred = InputWidget()
 
