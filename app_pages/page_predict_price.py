@@ -1,5 +1,5 @@
-from src.data_management import load_house_data, load_pkl_file
 import streamlit as st
+from src.data_management import load_house_data, load_pkl_file
 import numpy as np
 import pandas as pd
 
@@ -49,4 +49,20 @@ def page_predict_price_body():
     st.write("### Predict other house prices (in Ames, Iowa) \n")
     st.write("* info")
 
- 
+    live_pred = InputWidget()
+
+    if st.button("Run prediction"):
+        house_price_prediction = pipeline.predict(
+            live_pred.filter(best_features)).round(0)
+        st.write(
+            f"* The predicted sale price for the house is: &nbsp;${house_price_prediction[0]}  \n"
+        )
+
+
+
+# create widget fields for input
+def InputWidget():
+
+widget here
+
+    return live_pred
