@@ -63,6 +63,31 @@ def page_predict_price_body():
 # create widget fields for input
 def InputWidget():
 
-widget here
+    # load dataset
+    df = load_house_data()
+    percentageMin, percentageMax = 0.5, 1.0
+
+    # make an empty DataFrame
+    live_pred = pd.DataFrame([], index=[0])
+
+    # create two separate sections for input widgets
+    st.subheader("Ground floor living area (in square feet)")
+    feature = 'GrLivArea'
+    st_widget = st.number_input(
+        label=feature,
+        min_value=df[feature].min()*percentageMin,
+        max_value=df[feature].max()*percentageMax,
+        value=df[feature].median()
+    )
+    live_pred[feature] = st_widget
+
+    st.subheader("Overall quality of the house (from 1 - 10)")
+    feature = "OverallQual"
+    st_widget = st.selectbox(
+        label=feature,
+        options=df[feature].sort_values(ascending=True).unique()
+    )
+    live_pred[feature] = st_widget
+
 
     return live_pred
