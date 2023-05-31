@@ -55,11 +55,12 @@ def page_house_price_study_body():
         f"* **GarageArea**  -  Size of garage in square feet \n"
         f"* **1stFlrSF**    -  Size of First Floor in square feet \n"
         f"* **2ndFlrSF**    -  Size of Second Floor in square feet \n"
+
         f"* **TotalBsmtSF** -  Total Basement size in square feet \n"
     )
 
     # Correlation Heatmap
-    if st.checkbox("Correlation Heatmap"):
+    if st.checkbox("Inspect Correlation Heatmap"):
         st.write(
             f"The heatmap shows how the top seven attributes correlate "
             f"to each other and the target, 'SalePrice'. "
@@ -67,7 +68,7 @@ def page_house_price_study_body():
         corr_heatmap(df, vars_to_study)
 
     # Correlation Scatterplots
-    if st.checkbox("Correlation Scatterplots"):
+    if st.checkbox("Inspect Correlation Scatterplots"):
         st.write(
             f"The scatterplots shows how the datapoints of each individual "
             f"attribute correlates to SalePrice")
