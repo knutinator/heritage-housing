@@ -103,14 +103,56 @@ When inspecting the scatterplots in the House Price Study, it was clear that as 
 ---
 
 # The rationale to map the business requirements to the Data Visualisations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+
+As a client, I have the following requirements:
+
+**Business Requirement 1:**
+
+* I want to analyze the house records data to determine which variables have a significant impact on the sale price.
+  
+* I want to view the correlation coefficients on a heatmap to prioritize variables based on their importance for the sale price.
+  
+* I would like to plot the important variables against the sale price to visually understand their correlation.
+
+**Business Requirement 2:**
+
+* I need easy access and navigation of the inherited houses data to locate specific house attributes.
+  
+* I want an accurate ML model capable of predicting the prices of my four inherited houses in Ames, Iowa.
+
+* I need that the ML model provides precise price predictions for any other house in Ames, Iowa.
 
 [Back to Index](#index)
 
 ---
 
 # ML Business Case
-* In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+What are the business requirements?
+The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+Is there any business requirement that can be answered with conventional data analysis?
+Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+Does the client need a dashboard or an API endpoint?
+The client needs a dashboard
+What does the client consider as a successful project outcome?
+A study showing the most relevant variables correlated to sale price.
+Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+Can you break down the project into Epics and User Stories?
+Information gathering and data collection.
+Data visualization, cleaning, and preparation.
+Model training, optimization and validation.
+Dashboard planning, designing, and development.
+Dashboard deployment and release.
+Ethical or Privacy concerns?
+No. The client found a public dataset.
+Does the data suggest a particular model?
+The data suggests a regressor where the target is the sale price.
+What are the model's inputs and intended outputs?
+The inputs are house attribute information and the output is the predicted sale price.
+What are the criteria for the performance goal of the predictions?
+We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+How will the client benefit?
+The client will maximize the sales price for the inherited properties.
 
 [Back to Index](#index)
 
@@ -192,7 +234,7 @@ Overall, this initial analysis and correlation visualization allowed me to ident
 # Testing
 
 ## Unfixed Bugs
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not valid reason to leave bugs unfixed.
+* There are no unfixed bugs.
 
 [Back to Index](#index)
 
@@ -228,6 +270,7 @@ Overall, this initial analysis and correlation visualization allowed me to ident
 * Most of the code was adapted from the Churnometer walkthrough project, by Code Institute
 * General structure of the code was inspired by
 Farid 'faridjos' Benachenhou PP5 project: <https://github.com/faridjos/milestone-project-heritage-housing-issues>
+
 [Back to Index](#index)
 
 ---
