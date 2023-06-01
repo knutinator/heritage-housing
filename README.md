@@ -204,15 +204,18 @@ It also contains a live function that lets the client predict the price of any h
 ## Heroku
 
 * The App live link is: https://heritage-house.herokuapp.com/
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+* Heroku might need to be set to [Stack 20](https://devcenter.heroku.com/articles/heroku-20-stack)
+* The project was deployed to Heroku using the following steps:
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
+1. Set the runtime.txt Python version to python-3.8.12
+2. Make a Heroku Procfile with runtime instuctions
+3. Make a setup.sh file with Streamlit configuration settings
+4. Create a requirements.txt with all libraries needed
+5. Log in to Heroku and create an App
+6. At the Deploy tab, select GitHub as the deployment method.
+7. Select your repository name and click Search. Once it is found, click Connect.
+8. Select the branch you want to deploy, then click Deploy Branch.
+9. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
 
 [Back to Index](#index)
 
