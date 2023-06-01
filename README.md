@@ -14,7 +14,9 @@ The app helps the client to do the following:
 
 - [Dataset Content](#dataset-content)
 - [Business Requirements](#business-requirements)
-- [Hypothesis and how to validate?](#hypothesis-and-how-to-validate)
+- [Hypothesis and validation](#hypothesis-and-validation)
+  - [Hypothesis 1](#hypothesis-1)
+  - [Hypothesis 2](#hypothesis-2)
 - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
 - [ML Business Case](#ml-business-case)
 - [Dashboard Design](#dashboard-design)
@@ -80,8 +82,21 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ---
 
-# Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them).
+# Hypothesis and validation
+
+## Hypothesis 1
+
+It's believed that the attributes most people naturally consider important, like the size of the house and its overall quality, will turn out to be the key factors affecting house prices when we analyze the data and apply machine learning techniques.
+
+* **Validation:**
+The Feature Importance search on our selected algorithm showed us that 'Overall Quality' and 'Ground Floor Living Area' are the two most important attributes that influence sale price.
+
+## Hypothesis 2
+
+It's also expected that predicting the prices of houses with lower values will be easier compared to houses with higher values. The idea here is that as house prices go up, things get trickier because the relationships between different factors and the final price become more complex and uncertain.
+
+* **Validation:**
+When inspecting the scatterplots in the House Price Study, it was clear that as price went up, the datapoints became fewer and more spread out. This indicates a less obvious trend after a certain level, which in turn will lead to less accurate predictions for houses with higher value.
 
 [Back to Index](#index)
 
