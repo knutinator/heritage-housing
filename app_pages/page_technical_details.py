@@ -58,4 +58,4 @@ def page_technical_details_body():
             "*(Note: plots may take a while to load)*"
         )
         regression_evaluation_plots(X_train=X_train, y_train=y_train,
-                                X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)
+                                    X_test=X_test, y_test=y_test, pipeline=pipeline, alpha_scatter=0.5)

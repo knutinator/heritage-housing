@@ -5,8 +5,8 @@ import pandas as pd
 
 
 def page_predict_price_body():
-    
-    #load needed files
+
+    # load needed files
     version = 'v1'
     pipeline = load_pkl_file(
         f"outputs/predict_house_price/{version}/best_regressor_pipeline.pkl")
@@ -15,9 +15,10 @@ def page_predict_price_body():
                      .to_list()
                      )
 
-    df = pd.read_csv("inputs/datasets/raw/house-price-20211124T154130Z-001/house-price/inherited_houses.csv")
+    df = pd.read_csv(
+        "inputs/datasets/raw/house-price-20211124T154130Z-001/house-price/inherited_houses.csv")
 
-    #run price prediction on inherited houses using trained ML pipeline
+    # run price prediction on inherited houses using trained ML pipeline
     st.write("### Predicted sale prices of the client's four inherited houses")
     st.write(
         f"* These are the characteristics of the clients houses (scroll to view more):"
@@ -35,7 +36,7 @@ def page_predict_price_body():
         f"learning model to produce the prediction:"
 
     )
-    
+
     st.write(df.head())
 
     # calculate sum of houses
@@ -52,10 +53,9 @@ def page_predict_price_body():
         f"* The function below can be used to calculate a predicted "
         f"price for any house in Ames, Iowa. Input the square footage and "
         f"general quality of the house below, then press 'Run Prediction'. "
-        )
+    )
     st.warning(
         f"Note: the prediction model is unreliable on very large houses.")
-
 
     live_pred = InputWidget()
 
@@ -65,7 +65,6 @@ def page_predict_price_body():
         st.write(
             f"* The predicted sale price for the house is: &nbsp;${house_price_prediction[0]}  \n"
         )
-
 
 
 # create widget fields for input
@@ -96,6 +95,5 @@ def InputWidget():
         options=df[feature].sort_values(ascending=True).unique()
     )
     live_pred[feature] = st_widget
-
 
     return live_pred
