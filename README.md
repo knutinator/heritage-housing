@@ -179,8 +179,19 @@ How will the client benefit?
 ---
 
 # Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items that your dashboard library supports.
-* Eventually, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+
+The dashboard consists of five pages:
+
+1. **Quick Project Summary** - The page descrives the project, the dataset and the business requirements.
+
+2. **House Price Study** - The page displays visualisation of the correlation between the house attributes and house sale price. *This fulfills Business Requirement 1.*
+
+3. **Project Hypothesis** - The page lists the two project hypothesises and how they have been valiated.
+
+4. **Price Predictor** - The page displays the attributes of the client's four inherited houses and the predicted sale price of them.
+It also contains a live function that lets the client predict the price of any house in Ames, Iowa. *This fulfills Business Requirement 2.*
+
+5. **Technical Details** - The page displays the R2 performance score of the model, followed by descriptions of the pipeline and features used to make the predictions. It also shows an overview of how well the Machine Learning model performs.
 
 [Back to Index](#index)
 
