@@ -128,31 +128,51 @@ As a client, I have the following requirements:
 
 # ML Business Case
 What are the business requirements?
-The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
-The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+
+* The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+
+* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+
 Is there any business requirement that can be answered with conventional data analysis?
-Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+* Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+
 Does the client need a dashboard or an API endpoint?
-The client needs a dashboard
+
+* The client needs a dashboard
+
 What does the client consider as a successful project outcome?
-A study showing the most relevant variables correlated to sale price.
-Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+
+* A study showing the most relevant variables correlated to sale price.
+
+* Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+
 Can you break down the project into Epics and User Stories?
-Information gathering and data collection.
-Data visualization, cleaning, and preparation.
-Model training, optimization and validation.
-Dashboard planning, designing, and development.
-Dashboard deployment and release.
+
+* Information gathering and data collection.
+* Data visualization, cleaning, and preparation.
+* Model training, optimization and validation.
+* Dashboard planning, designing, and development.
+* Dashboard deployment and release.
+
 Ethical or Privacy concerns?
-No. The client found a public dataset.
+
+* No. The client found a public dataset.
+  
 Does the data suggest a particular model?
-The data suggests a regressor where the target is the sale price.
+
+* The data suggests a regressor where the target is the sale price.
+
 What are the model's inputs and intended outputs?
-The inputs are house attribute information and the output is the predicted sale price.
+
+* The inputs are house attribute information and the output is the predicted sale price.
+
 What are the criteria for the performance goal of the predictions?
-We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+
+* We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+
 How will the client benefit?
-The client will maximize the sales price for the inherited properties.
+
+* The client will maximize the sales price for the inherited properties.
 
 [Back to Index](#index)
 
