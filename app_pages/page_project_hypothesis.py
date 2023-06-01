@@ -10,7 +10,13 @@ def page_project_hypothesis_body():
         f"It's believed that the attributes most people naturally consider "
         f"important, like the size of the house and its overall quality, "
         f"will turn out to be the key factors affecting house prices "
-        f"when we analyze the data and apply machine learning techniques.\n "
+        f"when we analyze the data and apply machine learning techniques.\n\n\n "
+    )
+    st.success(
+        f"**Validation:**\n\n"
+        f"The Feature Importance search on our selected algorithm showed us "
+        f"that 'Overall Quality' and 'Ground Floor Living Area' are the two "
+        f"most important attributes that influence sale price."
     )
     st.info(
         f"**Hypothesis 2:**\n\n"
@@ -19,4 +25,12 @@ def page_project_hypothesis_body():
         f"values. The idea here is that as house prices go up, things get "
         f"trickier because the relationships between different factors and "
         f"the final price become more complex and uncertain. "
+    )
+    st.success(
+        f"**Validation:**\n\n"
+        f"When inspecting the scatterplots in the House Price Study, it was "
+        f"clear that as price went up, the datapoints became fewer and more"
+        f"spread out. This indicates a less obvious trend after a certain "
+        f"level, which in turn will lead to less accurate predictions for "
+        f"houses with higher value."
     )
