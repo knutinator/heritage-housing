@@ -1,10 +1,13 @@
 # Heritage Housing - Pricing Predictor <!-- omit in toc -->
 
-A machine learning app for house pricing visualization and preciction in Ames, Iowa.
+A machine learning app for house price visualization and prediction in Ames, Iowa.
 
 The app helps the client to do the following:
-- View what house attributes correlate to sale prices.
-- Predict future sale prices for specific houses in Ames, Iowa.
+
+- View how house attributes correlate to sale prices.
+- Predict future sale prices for specific houses.
+  
+*(Note: This app only works for houses in Ames, Iowa)*
 
 [View the app here >](https://heritage-house.herokuapp.com/)
 
@@ -29,8 +32,9 @@ The app helps the client to do the following:
 ---
 
 # Dataset Content
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
-* The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
+
+* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data).
+- The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa, indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
 |Variable|Meaning|Units|
 |:----|:----|:----|
@@ -63,14 +67,15 @@ The app helps the client to do the following:
 
 ---
 
-
 # Business Requirements
+
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximising the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that.
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
-* 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
+- 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualisations of the correlated variables against the sale price to show that.
+  
+- 2 - The client is interested in predicting the house sale price from her four inherited houses and any other house in Ames, Iowa.
 
 [Back to Index](#index)
 
@@ -82,14 +87,14 @@ Although your friend has an excellent understanding of property prices in her ow
 
 It's believed that the attributes most people naturally consider important, like the size of the house and its overall quality, will turn out to be the key factors affecting house prices when we analyze the data and apply machine learning techniques.
 
-* **Validation:**
+- **Validation:**
 The Feature Importance search on our selected algorithm showed us that 'Overall Quality' and 'Ground Floor Living Area' are the two most important attributes that influence sale price.
 
 ## Hypothesis 2
 
 It's also expected that predicting the prices of houses with lower values will be easier compared to houses with higher values. The idea here is that as house prices go up, things get trickier because the relationships between different factors and the final price become more complex and uncertain.
 
-* **Validation:**
+- **Validation:**
 When inspecting the scatterplots in the House Price Study, it was clear that as price went up, the datapoints became fewer and more spread out. This indicates a less obvious trend after a certain level, which in turn will lead to less accurate predictions for houses with higher value.
 
 [Back to Index](#index)
@@ -102,71 +107,73 @@ As a client, I have the following requirements:
 
 **Business Requirement 1:**
 
-* I want to analyze the house records data to determine which variables have a significant impact on the sale price.
+- I want to analyze the house records data to determine which variables have a significant impact on the sale price.
   
-* I want to view the correlation coefficients on a heatmap to prioritize variables based on their importance for the sale price.
+- I want to view the correlation coefficients on a heatmap to prioritize variables based on their importance for the sale price.
   
-* I would like to plot the important variables against the sale price to visually understand their correlation.
+- I would like to plot the important variables against the sale price to visually understand their correlation.
 
 **Business Requirement 2:**
 
-* I need easy access and navigation of the inherited houses data to locate specific house attributes.
+- I need easy access and navigation of the inherited houses data to locate specific house attributes.
   
-* I want an accurate ML model capable of predicting the prices of my four inherited houses in Ames, Iowa.
+- I want an accurate ML model capable of predicting the prices of my four inherited houses in Ames, Iowa.
 
-* I need that the ML model provides precise price predictions for any other house in Ames, Iowa.
+- I need that the ML model provides precise price predictions for any other house in Ames, Iowa.
 
 [Back to Index](#index)
 
 ---
 
 # ML Business Case
-What are the business requirements?
 
-* The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
+**What are the business requirements?**
 
-* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+- The client is interested in discovering how house attributes correlate with sale prices. Therefore, the client expects data visualizations of the correlated variables against the sale price.
 
-Is there any business requirement that can be answered with conventional data analysis?
-* Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
+- The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
-Does the client need a dashboard or an API endpoint?
+**Is there any business requirement that can be answered with conventional data analysis?**
 
-* The client needs a dashboard
+- Yes, we can use conventional data analysis to investigate how house attributes are correlated with the sale prices.
 
-What does the client consider as a successful project outcome?
+**Does the client need a dashboard or an API endpoint?**
 
-* A study showing the most relevant variables correlated to sale price.
+- The client needs a dashboard
 
-* Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
+**What does the client consider as a successful project outcome?**
 
-Can you break down the project into Epics and User Stories?
+- A study showing the most relevant variables correlated to sale price.
 
-* Information gathering and data collection.
-* Data visualization, cleaning, and preparation.
-* Model training, optimization and validation.
-* Dashboard planning, designing, and development.
-* Dashboard deployment and release.
+- Also, a capability to predict the sale price for the 4 inherited houses, as well as any other house in Ames, Iowa.
 
-Ethical or Privacy concerns?
+**Can you break down the project into Epics and User Stories?**
 
-* No. The client found a public dataset.
+- Information gathering and data collection.
+- Data visualization, cleaning, and preparation.
+- Model training, optimization and validation.
+- Dashboard planning, designing, and development.
+- Dashboard deployment and release.
+
+**Ethical or Privacy concerns?**
+
+- No. The client found a public dataset.
   
-Does the data suggest a particular model?
+**Does the data suggest a particular model?**
 
-* The data suggests a regressor where the target is the sale price.
+- The data suggests a regressor where the target is the sale price.
 
-What are the model's inputs and intended outputs?
+**What are the model's inputs and intended outputs?**
 
-* The inputs are house attribute information and the output is the predicted sale price.
+- The inputs are house attribute information and the output is the predicted sale price.
 
-What are the criteria for the performance goal of the predictions?
+**What are the criteria for the performance goal of the predictions?**
 
-* We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
+- We agreed with the client on an R2 score of at least 0.75 on the train set as well as on the test set.
 
-How will the client benefit?
+**How will the client benefit?**
 
-* The client will maximize the sales price for the inherited properties.
+- The client will maximize the sales price for the inherited properties.
 
 [Back to Index](#index)
 
@@ -191,9 +198,8 @@ It also contains a live function that lets the client predict the price of any h
 
 ---
 
-
-
 # Unfixed Bugs
+
 * There are no unfixed bugs.
 
 [Back to Index](#index)
@@ -201,11 +207,12 @@ It also contains a live function that lets the client predict the price of any h
 ---
 
 # Deployment
+
 ## Heroku
 
-* The App live link is: https://heritage-house.herokuapp.com/
-* Heroku might need to be set to [Stack 20](https://devcenter.heroku.com/articles/heroku-20-stack)
-* The project was deployed to Heroku using the following steps:
+- The App live link is: <https://heritage-house.herokuapp.com/>
+- Heroku might need to be set to [Stack 20](https://devcenter.heroku.com/articles/heroku-20-stack)
+- The project was deployed to Heroku using the following steps:
 
 1. Set the runtime.txt Python version to python-3.8.12
 2. Make a Heroku Procfile with runtime instuctions
@@ -248,11 +255,11 @@ altair<5<br>
 
 ---
 
-# Credits 
+# Credits
 
-* Most of the code was adapted from the Churnometer walkthrough project, by Code Institute
+- Most of the code was adapted from the Churnometer walkthrough project, by Code Institute
   
-* General structure of the code was inspired by
+- General structure of the code was inspired by
 Farid 'faridjos' Benachenhou PP5 project: <https://github.com/faridjos/milestone-project-heritage-housing-issues>
 
 [Back to Index](#index)
