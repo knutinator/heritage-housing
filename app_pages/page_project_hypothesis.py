@@ -4,8 +4,8 @@ import streamlit as st
 def page_project_hypothesis_body():
 
     st.write("### Project Hypothesis")
-
-    st.info(
+    st.write("---")
+    st.write(
         f"**Hypothesis 1:**\n\n"
         f"It's believed that the attributes most people naturally consider "
         f"important, like the size of the house and its overall quality, "
@@ -18,7 +18,8 @@ def page_project_hypothesis_body():
         f"that 'Overall Quality' and 'Ground Floor Living Area' are the two "
         f"most important attributes that influence sale price."
     )
-    st.info(
+    st.write("---")
+    st.write(
         f"**Hypothesis 2:**\n\n"
         f"It's also expected that predicting the prices of houses "
         f"with lower values will be easier compared to houses with higher "
@@ -29,7 +30,7 @@ def page_project_hypothesis_body():
     st.success(
         f"**Validation:**\n\n"
         f"When inspecting the scatterplots in the House Price Study, it was "
-        f"clear that as price went up, the datapoints became fewer and more"
+        f"clear that as price went up, the datapoints became fewer and more "
         f"spread out. This indicates a less obvious trend after a certain "
         f"level, which in turn will lead to less accurate predictions for "
         f"houses with higher value."
