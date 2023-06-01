@@ -219,7 +219,27 @@ It also contains a live function that lets the client predict the price of any h
 ---
 
 ## Main Data Analysis and Machine Learning Libraries
-* Here you should list the libraries you used in the project and provide example(s) of how you used these libraries.
+
+*(from requirements.txt)*<br>
+
+numpy==1.18.5<br>
+pandas==1.4.2<br>
+matplotlib==3.3.1<br>
+seaborn==0.11.0v
+pandas-profiling==3.1.0<br>
+plotly==4.12.0<br>
+ppscore==1.2.0<br>
+streamlit==0.85.0<br>
+feature-engine==1.0.2<br>
+imbalanced-learn==0.8.0<br>
+scikit-learn==0.24.2<br>
+xgboost==1.2.1<br>
+yellowbrick==1.3<br>
+Jinja2==3.1.1<br>
+MarkupSafe==2.0.1<br>
+protobuf==3.20<br>
+ipywidgets==8.0.2<br>
+altair<5<br>
 
 [Back to Index](#index)
 
@@ -228,6 +248,7 @@ It also contains a live function that lets the client predict the price of any h
 # Credits 
 
 * Most of the code was adapted from the Churnometer walkthrough project, by Code Institute
+  
 * General structure of the code was inspired by
 Farid 'faridjos' Benachenhou PP5 project: <https://github.com/faridjos/milestone-project-heritage-housing-issues>
 
