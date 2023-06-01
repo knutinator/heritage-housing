@@ -20,13 +20,7 @@ The app helps the client to do the following:
 - [The rationale to map the business requirements to the Data Visualisations and ML tasks](#the-rationale-to-map-the-business-requirements-to-the-data-visualisations-and-ml-tasks)
 - [ML Business Case](#ml-business-case)
 - [Dashboard Design](#dashboard-design)
-- [Development](#development)
-- [User Stories](#user-stories)
-- [Initial Data Analysis](#initial-data-analysis)
-  - [Exploratory Data Analysis (EDA) with Pandas](#exploratory-data-analysis-eda-with-pandas)
-- [Correlation Analysis](#correlation-analysis)
-- [Testing](#testing)
-  - [Unfixed Bugs](#unfixed-bugs)
+- [Unfixed Bugs](#unfixed-bugs)
 - [Deployment](#deployment)
   - [Heroku](#heroku)
   - [Main Data Analysis and Machine Learning Libraries](#main-data-analysis-and-machine-learning-libraries)
@@ -197,74 +191,9 @@ It also contains a live function that lets the client predict the price of any h
 
 ---
 
-# Development
-
-# User Stories
-After reviewing the business requirements, a set of user stories were formulated to guide the development procedure. These were collected in a project planning board which can be viewed here: <https://github.com/users/knutinator/projects/3>
-<br><br>
-
-**USER STORY #1: View variables relevant to price**
-
-* As a client, I want to see visualizations of the most relevant variables correlated to sale price, so that I can better understand the relationship between house attributes and sale prices.
-<br><br>
-
-**USER STORY #2: View distribution of attributes**
-
-* As a client, I want to see visualizations of the distribution of house attributes, so that I can better understand the range of values for each variable.
-<br><br>
-
-**USER STORY #3: Predict house prices**
-
-* As a client, I want a machine learning model that can predict the sale price of my inherited houses, as well as any other house in Ames, Iowa, so that I can make informed decisions about the sales prices.
-<br><br>
-
-**USER STORY #4: View prediction accuracy**
-
-* As a client, I want to be able to test the accuracy of the model on a test set, and receive a performance report with an R2 score of at least 0.75 on both the train and test sets.
-<br><br>
-
-**USER STORY #5: View project on dashboard**
-
-* As a client, I want a dashboard that presents the data visualizations and machine learning model predictions in a clear and concise manner, so that I can easily access the insights and make informed decisions about the sales prices of the houses.
-<br><br>
-
-[Back to Index](#index)
-
----
-
-# Initial Data Analysis
-In this project, I conducted an initial analysis of the house price dataset to gain insights into the factors influencing house prices. The dataset consists of information about various features related to houses, such as square footage, number of bedrooms, basement characteristics, garage details, and more.
-
-1. **Loading the Dataset:** I started by loading the house price dataset into a Pandas DataFrame, allowing me to manipulate and analyze the data efficiently.<br><br>
-2. **Data Cleaning:** Before diving into the analysis, I performed data cleaning to make the data more easily computable. This involved converting all float values to integer values, replacing all NaN values with 0, and replacing some of the None values with No (to confirm with the Dataset Content Description.)<br><br>
-3. **Data remapping:**
-Following that, I mapped all the categorical data values to numerical values based on how many categories were in each column. The result was a DataFrame containing only numerical values, which is much more suitable for further analysis.
-
-## Exploratory Data Analysis (EDA) with Pandas
-
-To get a better understanding of the dataset, I performed Exploratory Data Analysis (EDA) using the Pandas library in Python. Here are the key steps I took:
-
-1. **Descriptive Statistics:** I computed descriptive statistics for the numerical variables, such as mean, standard deviation, minimum, maximum, and quartiles. This provided an overview of the central tendencies and distributions of the data.<br><br>
-2. **Visualization:** To visualize the relationships between the house price and other variables, I created various types of plots, including scatter plots, box plots, and bar charts. These visualizations allowed me to identify potential correlations and patterns.
-
-# Correlation Analysis
-
-Correlation analysis is crucial for understanding the relationships between variables and their impact on house prices. I used the correlation coefficient to measure the strength and direction of the linear relationship between the variables. Here are the steps I followed:
-
-1. **Selecting Variables:** I identified a set of key variables that I hypothesized might have a significant impact on house prices. These variables included square footage, overall house quality, the house age, size of the garage, and kitchen quality.<br><br>
-2. **Computing Correlations:** Using the Pandas library, I computed the correlation coefficients between the selected variables and the house prices. I utilized both Pearson correlation (for numerical variables) and Spearman correlation to capture different types of relationships.<br><br>
-3. **Visualization:** To visually represent the correlations, I created scatter plots and heatmaps. Scatter plots helped visualize the relationships between individual variables and house prices, while heatmaps provided a comprehensive view of the correlation matrix.
 
 
-Overall, this initial analysis and correlation visualization allowed me to identify potential predictors of house prices and gain insights into the dataset. These findings laid the foundation for further analysis and modeling in the project.
-
-[Back to Index](#index)
-
----
-
-# Testing
-
-## Unfixed Bugs
+# Unfixed Bugs
 * There are no unfixed bugs.
 
 [Back to Index](#index)
