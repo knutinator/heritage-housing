@@ -10,7 +10,7 @@ The app helps the client to do the following:
 
 ---
 
-## Index <!-- omit in toc -->
+## Index
 
 - [Dataset Content](#dataset-content)
 - [Business Requirements](#business-requirements)
