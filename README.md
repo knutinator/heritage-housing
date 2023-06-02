@@ -243,7 +243,7 @@ Finally, there's a section that shows the limitations of the model. We have a te
 numpy==1.18.5<br>
 pandas==1.4.2<br>
 matplotlib==3.3.1<br>
-seaborn==0.11.0<br
+seaborn==0.11.0<br>
 pandas-profiling==3.1.0<br>
 plotly==4.12.0<br>
 ppscore==1.2.0<br>
