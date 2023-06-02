@@ -191,7 +191,7 @@ A *heatmap* showing how strongly all the seven attributes correlate to the sale 
 *scatterplots* that shows how the data within each attribute  individually correlate to the sale price.
 
 
-1. **Project Hypothesis** - The page lists the two project hypothesises and how they have been valiated.
+1. **Project Hypothesis** - The page lists the two project hypothesises and how they have been validated.
 
 2. **Price Predictor** - The page displays the attributes of the client's four inherited houses and the predicted sale price of them.
 It also contains a live function that lets the client predict the price of any house in Ames, Iowa. *This fulfills Business Requirement 2.*<br><br>
