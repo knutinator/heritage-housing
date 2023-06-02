@@ -185,14 +185,22 @@ The dashboard consists of five pages:
 
 1. **Quick Project Summary** - The page descrives the project, the dataset and the business requirements.
 
-2. **House Price Study** - The page displays visualisation of the correlation between the house attributes and house sale price. *This fulfills Business Requirement 1.*
+2. **House Price Study** - The page displays visualisations of the correlation between the house attributes and house sale price. *This fulfills Business Requirement 1.* <br><br>
+Beginning with a repeat of the requirement and and a checkbox to display an overview of the raw data, it's followed by a description of the seven attributes that were shown to be most correlated with sale price. Below that we have two more checkboxes which displays how the data study was performed in two different ways:<br><br>
+A *heatmap* showing how strongly all the seven attributes correlate to the sale price and each other, followed by
+*scatterplots* that shows how the data within each attribute  individually correlate to the sale price.
 
-3. **Project Hypothesis** - The page lists the two project hypothesises and how they have been valiated.
 
-4. **Price Predictor** - The page displays the attributes of the client's four inherited houses and the predicted sale price of them.
-It also contains a live function that lets the client predict the price of any house in Ames, Iowa. *This fulfills Business Requirement 2.*
+1. **Project Hypothesis** - The page lists the two project hypothesises and how they have been valiated.
 
-5. **Technical Details** - The page displays the R2 performance score of the model, followed by descriptions of the pipeline and features used to make the predictions. It also shows an overview of how well the Machine Learning model performs.
+2. **Price Predictor** - The page displays the attributes of the client's four inherited houses and the predicted sale price of them.
+It also contains a live function that lets the client predict the price of any house in Ames, Iowa. *This fulfills Business Requirement 2.*<br><br>
+The page starts with a repeat of the requirement followed by the data for the four inhereted houses. Under that we display the predicted prece for all four houses, followed by what the estimated total sum will be.<br><br>
+Underneath is the live function that lets the user input data values from any house in Ames, Iowa and then run the prediction function to get an estimate of what the sale price will be. The input is limited to the attributes that was shown in the study to have most impact regardning the final price. To run the prediction, the user just have to click the button 'Run prediction'. The function comes with a warning, informing the user that the prediction will be uncertain on very large houses.
+
+1. **Technical Details** - The page displays the R2 performance score of the model, followed by descriptions of the pipeline and features used to make the predictions. It also shows an overview of how well the Machine Learning model performs.<br><br>
+The Evaluation section displays the different scores the model received on the train and test sets when running the evaluation function.<br><br>
+Finally, there's a section that shows the limitations of the model. We have a text informing us that it is inaccurate on prices over 400000. This is followed by a checkbox, which when clicked generates graphs detailing how the prediction deviates from the actual data points after a certain level.
 
 [Back to Index](#index)
 
