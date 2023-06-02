@@ -20,6 +20,10 @@ def page_predict_price_body():
 
     # run price prediction on inherited houses using trained ML pipeline
     st.write("### Predicted sale prices of the client's four inherited houses")
+    st.info(
+        f"* The client is interested in predicting the house sales price "
+        f" from her four inherited houses, and any other house in Ames, Iowa."
+    )
     st.write(
         f"* These are the characteristics of the clients houses (scroll to view more):"
     )
